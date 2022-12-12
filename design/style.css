@@ -1,0 +1,114 @@
+:root {
+  --color-moderate-violet: hsl(263, 55%, 52%);
+  --color-very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --color-very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-light-gray: hsl(0, 0%, 81%);
+  --color-grayish-blue: hsl(210, 46%, 95%);
+  box-sizing: border-box;
+  background-color: var(--color-white);
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+}
+
+*, *:after, *:before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  padding: 50px 25px;
+  display: grid;
+  align-items: center;
+  gap: 20px;
+  border: solid 1px red;
+}
+.main__left {
+  display: grid;
+  gap: 20px;
+}
+.main__left__top, .main__left__bottom {
+  display: grid;
+  gap: 20px;
+}
+.main__card {
+  border-radius: 5px;
+  padding: 20px;
+}
+.main__card__top {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.main__card__top h3 {
+  font-weight: 300;
+}
+.main__card__top p {
+  opacity: 50%;
+}
+.main__card__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.main__card__bottom p {
+  opacity: 75%;
+}
+.main__imgcontainer {
+  width: 50px;
+  height: 50px;
+}
+.main__imgcontainer img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.main .first {
+  background-color: var(--color-moderate-violet);
+  background-image: url("/images/bg-pattern-quotation.svg");
+  background-position: right 10% top 0%;
+  background-repeat: no-repeat;
+}
+.main .second {
+  background-color: var(--color-very-dark-grayish-blue);
+}
+.main .third,
+.main .fifth {
+  background-color: var(--color-white);
+}
+.main .forth {
+  background-color: var(--color-very-dark-blackish-blue);
+}
+.main .text-black {
+  color: var(--color-very-dark-blackish-blue);
+}
+.main .text-white {
+  color: var(--color-white);
+}
+
+@media (min-width: 376px) {
+  .main {
+    grid-template-columns: 3fr 1fr;
+  }
+  .main__left {
+    grid-template-rows: 1fr 1fr;
+  }
+  .main__left__top {
+    grid-template-columns: 2fr 1fr;
+  }
+  .main__left__bottom {
+    grid-template-columns: 1fr 2fr;
+  }
+  .main .fifth {
+    min-height: 0;
+    height: 100%;
+    overflow: auto;
+  }
+}/*# sourceMappingURL=style.css.map */
